@@ -75,6 +75,23 @@ class SendData extends Component {
     console.log("Service name: " + SendData.serviceName)
     console.log("Service type: " + SendData.serviceType)
 
+    /* Creating the call to the action server.*/
+    const actionClient = new window.ROSLIB.ActionClient({
+      ros: ros,
+      serverName: '/start_path',
+      actionName: 'my_husky_messages/MovePathActionGoal'
+    });
+
+    const actionGoal = new window.ROSLIB.Goal({
+
+      actionClient: actionClient,
+      goalMessage: {
+        input: 1
+        }
+      });
+
+
+
 
     const saveGpsRequest = new window.ROSLIB.ServiceRequest({
       gps_coordinates: []
@@ -93,6 +110,7 @@ class SendData extends Component {
       console.log("In saveGpsService.callService")
       if (response.success) {
         alert("Data sent successfully")
+        actionGoal.send();
       } else {
         alert("ROS service failed!")
       }
