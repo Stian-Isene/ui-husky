@@ -79,7 +79,7 @@ class SendData extends Component {
     const actionClient = new window.ROSLIB.ActionClient({
       ros: ros,
       serverName: '/start_path',
-      actionName: 'my_husky_messages/MovePathActionGoal'
+      actionName: 'my_husky_messages/MovePathAction'
     });
 
     const actionGoal = new window.ROSLIB.Goal({
