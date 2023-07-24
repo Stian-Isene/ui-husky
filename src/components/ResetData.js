@@ -17,7 +17,7 @@ function ResetData() {
   };
 
   return (
-    <button onClick={handleReset} class="btn btn-lg btn-primary" type="button">Remove markers</button>
+    <button onClick={handleReset} class="btn btn-warning" type="button">Remove markers</button>
   );
 }
 

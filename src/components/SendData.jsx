@@ -104,7 +104,7 @@ class SendData extends Component {
     console.log("End")
   }
   render() {
-    return (<button onClick={this.sendGPSData} class="btn btn-lg btn-primary" type="button"> Start Robot </button>);
+    return (<button onClick={this.sendGPSData} class="btn btn-primary" type="button" style={{margin:"0px 10px 0px 10px"}}> Send Data </button>);
   }
 }
 
