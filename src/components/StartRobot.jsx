@@ -81,7 +81,7 @@ class StartRobot extends Component {
     const actionGoal = new window.ROSLIB.Goal({
       actionClient: actionClient,
       goalMessage: {
-      input: {navType}
+      input: navType
       }
     });
 
