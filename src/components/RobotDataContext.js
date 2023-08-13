@@ -15,6 +15,8 @@ export const RobotDataContextProvider = ({ children }) => {
   /* this variable will deternime the navigation type: 
   0 being undefined, 1 is waypoint navigation and 2 is surface coverage */
   const [navType, setNavType] = useState(0);
+  // this is for uploading paths
+  const [files, setFiles] = useState("");
 
   const value = {
     markerPos,
@@ -23,6 +25,8 @@ export const RobotDataContextProvider = ({ children }) => {
     setMarkerPath,
     navType,
     setNavType,
+    files,
+    setFiles,
   }
   return (
     <RobotDataContext.Provider value={value}>{children}</RobotDataContext.Provider>
