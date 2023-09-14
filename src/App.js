@@ -5,6 +5,7 @@ import MapComp from "./components/MapComp";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import RemoteControl from "./components/RemoteControl";
 import { RobotDataContextProvider } from "./components/RobotDataContext";
+import Title from "./components/Title";
 
 /* `function App` is defining the main component of the application. It is returning a JSX element that
 includes a `Router` component from the `react-router-dom` library, a `RobotDataContextProvider`
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <RobotDataContextProvider>
         <div className="App">
+          <Title />
           <Header />
           <Routes>
             <Route path="/" element={<MapComp />} />

@@ -114,7 +114,8 @@ class RobotState extends Component {
   render() {
     return (
       <div>
-        <Row>
+        <Row style={{padding:`16px`, display: `flex`, alignItems:`center`}}>
+          <p className='mt-0' style={{margin:`0px`}}>Current location:  </p>
           <Col>
             <p className='mt-0'>Lat:{this.state.x} </p>
           </Col>

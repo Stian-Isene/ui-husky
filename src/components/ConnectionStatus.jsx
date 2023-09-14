@@ -52,7 +52,7 @@ class ConnectionStatus extends Component {
       <div>
         <Alert className='text-center m-3'
           variant={this.state.connected ? "success" : "danger"}>
-          {this.state.connected ? "Connected" : "Disconnected"}
+          {this.state.connected ? "robot status: Connected" : "robot status: Disconnected"}
         </Alert>
       </div>
     );
